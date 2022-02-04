@@ -1,19 +1,20 @@
 #include<stdio.h>
-
-union student
-{
-    int rollno;
-    char name[30];
-    
-};
-
 int main()
 {
-    union student s1; 
-    printf("%ld\n",sizeof(s1));
-   scanf("%d",&s1.rollno);
-   printf("%d\n",s1.rollno);
-   scanf("%s",s1.name);
-   printf("%s",s1.name);
-    return 0;
+    int a[5];
+    int even=0,odd=0;
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(int i=0;i<5;i++)
+    {
+        if(a[i]%2==0)
+        even++;
+        else
+        odd++;
+        
+    }
+    printf("total even number is :%d\n",even);
+    printf("total odd number is :%d",odd);
 }
